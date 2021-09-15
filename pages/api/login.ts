@@ -14,6 +14,8 @@ export default async function handler(
 ) {
   await nextCors(req, res, corsOptions)
 
+  console.log(req.cookies);
+
   // 本来は ID と Pass で認証
   const isLogin = true;
 
