@@ -22,7 +22,7 @@ export default async function handler(
   if (req.headers.origin === corsOptions.origin && isLogin) {
     res.setHeader("Set-Cookie", [
       `sid=${getSessionId()}`,
-      'Domain=localhost',
+      'Domain=127.0.0.1',
       'Path=/',
       'HttpOnly',
       'Secure',
